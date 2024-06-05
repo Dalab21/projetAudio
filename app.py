@@ -16,6 +16,7 @@ def callback(indata, frames, time, status):
     data = np.copy(indata)
     # Écriture des données dans le fichier audio
     sf.write("output.mp3", data, fs)
+    print("enregistrement fait")
 
 # Démarrage de l'enregistrement
 with sd.InputStream(callback=callback):
