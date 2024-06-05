@@ -21,3 +21,4 @@ def callback(indata, frames, time, status):
 # Démarrage de l'enregistrement
 with sd.InputStream(callback=callback):
     sd.sleep(duration * 1000)  # attente de la fin de l'enregistrement
+    print("Fin de l'enregistrement. Le fichier 'enregistrement.mp3' a été créé.")
